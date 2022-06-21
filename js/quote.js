@@ -17,9 +17,13 @@ const quotes = [
   }
 ];
 
-const quote = document.querySelector('.quote');
-const quoteText = document.querySelector('.quote span:first-child');
+const quote = document.querySelector('.quote span:first-child');
 const author = document.querySelector('.quote span:last-child');
+// select random quotes.
+const todayQuote = quotes[parseInt(Math.random() * quotes.length)];
 
+quote.innerText = todayQuote.quote;
+author.innerText = todayQuote.author;
 
-
+quote.style.setProperty('font-size', '24px');
+quote.style.setProperty('text-align', 'center');

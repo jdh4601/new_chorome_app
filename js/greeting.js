@@ -2,13 +2,15 @@ const loginForm = document.querySelector('.login_form');
 const loginInput = document.querySelector('.login_form input');
 const loginBtn = document.querySelector('.login_form button');
 const greeting = document.querySelector('.content #greeting');
+const content = document.querySelector('.content');
 const clearBtn = document.querySelector('.clear_name');
 
 // 인사 출력하기
 function greetName() {
   const username = window.localStorage.getItem('name'); // 저장된 입력값 읽어오기
-  greeting.classList.remove('hidden'); // login-form 나타내기
   greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove('hidden');
+  content.classList.remove('hidden');
   clearBtn.classList.remove('hidden');
 }
 
